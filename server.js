@@ -11,8 +11,8 @@ var mongoose = require('mongoose');                     // mongoose for mongodb
 
 
 var client = new medium.MediumClient({
-  clientId: 'f9ac9c750c0a',
-  clientSecret: '92b6bd6f149866abe1872ef77da25c0f70ea4955'
+  clientId: '',
+  clientSecret: ''
 })
 
 
@@ -60,32 +60,3 @@ var client = new medium.MediumClient({
 var url = client.getAuthorizationUrl('yolo', 'https://google.com', [
   medium.Scope.BASIC_PROFILE, medium.Scope.PUBLISH_POST
 ])
-
-
-
-//(Send the user to the authorization URL to obtain an authorization code.)
-//
-// client.exchangeAuthorizationCode('c01adc1e279d', "https://www.getpostman.com/oauth2/callback",function(err,token) {
-//     console.log(token + " error : " + err);
-// })
-//
-// client.getUser(function(err,data) {
-//     console.log("User : "JSON.stringify(data));
-// });
-//
-
-// client.setAccessToken('1421909a8e1587310749ef32e772d702a');
-// client.createPost({
-//   userId : "12bc3354bcc5350bd53426c426064ef32c6abd5c0d1e6715d9aaa556de8b72d2d",
-//   title : "My First Post using the Medium Publish API",
-//   content : "<h1>This is pretty cool</h1><p>Loving this</p>",
-//   contentFormat : "html",
-//   tags : ["API", "Medium API", "Medium"]},
-//   function(err, data) {
-//     if (!err) {
-//       console.log("No error in creating post: " + data);
-//     } else {
-//       console.log("error in creating post: " + err);
-//     }
-//   }
-// );
